@@ -214,8 +214,10 @@ hr {
     position: relative;
     bottom: 85px;
     width: 400px;
-    height: 400px;
+    height: 500px;
     border-radius: 15px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .about h2{
