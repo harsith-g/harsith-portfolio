@@ -208,7 +208,6 @@ hr {
 .about-container{
     display: flex;
     gap: 2rem;
-    align-items: center;
 }
 
 .about img{
@@ -217,7 +216,7 @@ hr {
     border-radius: 15px;
     object-fit: cover;
     object-position: top;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .about h2{
