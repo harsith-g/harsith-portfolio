@@ -216,6 +216,7 @@ hr {
     border-radius: 15px;
     object-fit: cover;
     object-position: top;
+    align-self: center;
 }
 
 .about h2{
