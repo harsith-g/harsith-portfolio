@@ -1,3 +1,13 @@
+:root {
+  --bg: #f7f5f0;
+  --ink: #17181c;
+  --muted: #57565d;
+  --accent: #a6721e;
+  --accent-dark: #7c5417;
+  --surface: #ffffff;
+  --border: rgba(23, 24, 28, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +15,9 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
   overflow-x: hidden;
 }
 
@@ -33,8 +45,9 @@ header {
   list-style: none;
   display: flex;
   gap: 3rem;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(23, 24, 28, 0.08);
   padding: 10px 25px;
   border-radius: 25px;
 }
@@ -85,24 +98,30 @@ header {
 
 .home-s {
   font-weight: bold;
-  color: green;
+  color: var(--accent);
 }
 
 .info-home h1 {
-  font-size: 70px;
-  font-family: "Raleway", sans-serif;
+  font-size: 68px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
+  color: var(--ink);
   margin-bottom: 20px;
 }
 
 .info-home h3 {
-  font-size: 40px;
+  font-size: 32px;
   font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: var(--accent);
   margin-bottom: 20px;
 }
 
 .info-p {
-  color: #222;
-  font-family: "Roboto", sans-serif;
+  color: var(--muted);
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 20px;
 }
 
@@ -180,6 +199,8 @@ hr {
 .home img {
   width: 400px;
   border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 60px -25px rgba(23, 24, 28, 0.45);
   flex-shrink: 0;
 }
 
@@ -257,9 +278,9 @@ hr {
 
 .c1:hover {
   transform: translateY(-6px) scale(1.03);
-  border-color: #ff3333;
-  background-color: #fff5f5;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  border-color: var(--accent);
+  background-color: #fbf3e7;
+  box-shadow: 0 4px 15px rgba(23, 24, 28, 0.12);
   cursor: pointer;
 }
 
@@ -324,7 +345,7 @@ hr {
 }
 
 .project-card h3 {
-  color: #1e40af;
+  color: var(--ink);
   margin-bottom: 8px;
 }
 
@@ -340,8 +361,8 @@ hr {
 
 .skills a {
   display: inline-block;
-  background: #e0e7ff;
-  color: #1e3a8a;
+  background: rgba(166, 114, 30, 0.12);
+  color: var(--accent-dark);
   text-decoration: none;
   font-size: 0.8rem;
   padding: 5px 10px;
@@ -351,7 +372,7 @@ hr {
 }
 
 .skills a:hover {
-  background: #c7d2fe;
+  background: rgba(166, 114, 30, 0.22);
 }
 
 .btns {
@@ -361,7 +382,7 @@ hr {
 }
 
 .btn {
-  background: #1e40af;
+  background: var(--accent);
   color: white;
   text-decoration: none;
   padding: 8px 14px;
@@ -374,7 +395,7 @@ hr {
 }
 
 .btn:hover {
-  background: #2563eb;
+  background: var(--accent-dark);
 }
 
 /* ─── SERVICES ─── */
@@ -430,7 +451,7 @@ hr {
 }
 
 .service-card h3 {
-  color: #1e40af;
+  color: var(--ink);
   margin-bottom: 10px;
   transition: color 0.5s;
   position: relative;
@@ -452,7 +473,7 @@ hr {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #474af0;
+  background: var(--accent);
   z-index: 0;
   transition: 0.5s;
 }
@@ -526,7 +547,7 @@ hr {
 
 .contact-item i {
   font-size: 20px;
-  color: #474af0;
+  color: var(--accent);
 }
 
 .social-links {
@@ -555,7 +576,7 @@ hr {
 
 .social-link[href*="github"]:hover { background: #000; }
 .social-link[href*="linkedin"]:hover { background: #0A66C2; }
-.social-link[href*="mailto"]:hover { background: #474af0; }
+.social-link[href*="mailto"]:hover { background: var(--accent); }
 
 .contact-form {
   flex: 1;
@@ -579,11 +600,11 @@ hr {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #474af0;
+  border-color: var(--accent);
 }
 
 .btn-send {
-  background: #474af0;
+  background: var(--accent);
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -596,7 +617,7 @@ hr {
 }
 
 .btn-send:hover {
-  background: #2c36d9;
+  background: var(--accent-dark);
 }
 
 /* ─── FOOTER ─── */
@@ -636,7 +657,7 @@ hr {
 }
 
 .footer-links li a:hover {
-  color: #474af0;
+  color: var(--accent);
 }
 
 .footer-social {
@@ -653,7 +674,7 @@ hr {
 }
 
 .footer-social a:hover {
-  color: #474af0;
+  color: var(--accent);
 }
 
 .footer-copy {
@@ -684,7 +705,7 @@ hr {
   flex-direction: column;
   z-index: 9999;
   overflow: hidden;
-  color: #00f0ff;
+  color: #d9a655;
   text-align: center;
 }
 
